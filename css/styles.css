@@ -47,10 +47,20 @@ canvas {
   transition: all .5s;
 }
 
-#record:hover { 
+#record:hover, #save_img:hover { 
   filter: invert(); 
   border: 1px solid grey;
   background-color: black; 
+}
+
+#rotate {
+  height: 3.5em;
+  border-radius: 100%;
+  padding: 10px;
+
+  /*filter: invert(); */
+  /*border: 1px solid #202020;*/
+  background-color: #dfdfdf;
 }
 /*#save_img:hover { background-color: #dfdfdf; border: #dfdfdf; }*/
 
