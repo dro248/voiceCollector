@@ -3,6 +3,8 @@
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Voice Collector Project</title>
+  <script type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script src="js/audiodisplay.js"></script>
   <script src="js/recorderjs/recorder.js"></script>
@@ -10,11 +12,18 @@
 </head>
 <body>
   <div id="viz">
-    <canvas id="analyser" width="1024" height="500"></canvas>
-    <canvas id="wavedisplay" width="1024" height="500"></canvas>
+    <div id="graphContainer">
+      <canvas id="analyser" width="1024" height="500"></canvas>
+      <canvas id="wavedisplay" width="1024" height="500"></canvas>
+    </div>
+  </div>
+  <div id="textContainer">
+    <h1>Voice Collector</h1>
+    <p>Here is some text...</p>
   </div>
   <div id="controls">
-    <img id="record" src="img/mic128.png" onclick="toggleRecording(this);">
+    <!-- <img id="record" src="img/mic128.png" onclick="toggleRecording(this);"> -->
+    <img id="record" src="img/muted.svg" onclick="toggleRecording(this);">
     <a id="save" href="#"><img src="img/save.svg"></a>
   </div>
 </body>

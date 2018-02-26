@@ -58,12 +58,16 @@ function toggleRecording( e ) {
         audioRecorder.stop();
         e.classList.remove("recording");
         audioRecorder.getBuffers( gotBuffers );
-    } else {
+        document.getElementById('record').src = "img/microphone.svg";
+    } 
+    else {
         // start recording
         if (!audioRecorder)
             return;
+
         e.classList.add("recording");
         audioRecorder.clear();
+        document.getElementById('record').src = "img/microphone.svg";
         audioRecorder.record();
     }
 }

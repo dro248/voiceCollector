@@ -10,12 +10,9 @@ body {
 }
 canvas { 
   display: inline-block; 
-  /*background: #202020; */
-  width: 200px;
+  width: 49%;
   height: 100px;
   background-color: black;
-  /*box-shadow: 1px 0px 10px grey;*/
-  /*border: 1px solid black;*/
 }
 #controls {
 /*  display: flex;
@@ -32,20 +29,19 @@ canvas {
   background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
   background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
 }
+#record { cursor: pointer; }
 #save, #save img { height: 10vh; }
 #save { opacity: 0.25;}
 #save[download] { opacity: 1;}
 #viz {
-  height: 20%;
-  /*width: 100%;*/
-  display: block;
-  /*flex-direction: column;*/
   justify-content: space-around;
-  /*align-items: center;*/
 }
-
-#analyser { position: fixed; top: 0; left: 0; }
-#wavedisplay { position: fixed; top: 0; right: 0; }
+#graphContainer {
+  width: 50%;
+  margin: auto;
+}
+/*#analyser { position: fixed; top: 0; left: 0; }
+#wavedisplay { position: fixed; top: 0; right: 0; }*/
 @media (orientation: landscape) {
   body { flex-direction: row;}
   #controls { flex-direction: column; height: 100%; width: 10%;}
