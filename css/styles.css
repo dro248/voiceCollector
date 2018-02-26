@@ -36,15 +36,23 @@ canvas {
 }
 #record, #save_img { 
   height: 3.5em;
-  border: 1px solid black;
   border-radius: 100%;
   padding: 10px;
+
+  filter: invert(); 
+
+  border: 1px solid #202020;
+  background-color: #202020;
   cursor: pointer;
   transition: all .5s;
 }
 
-#record:hover { filter: invert(); background-color: #202020; }
-#save_img:hover { background-color: #dfdfdf; border: #dfdfdf; }
+#record:hover { 
+  filter: invert(); 
+  border: 1px solid grey;
+  background-color: black; 
+}
+/*#save_img:hover { background-color: #dfdfdf; border: #dfdfdf; }*/
 
 /*#record.recording { 
   background: red;
@@ -53,7 +61,7 @@ canvas {
   background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
 }*/
 /*#save, #save img { height: 10vh; }*/
-#save { opacity: 0.25;}
+#save { opacity: 0.4;}
 #save[download] { opacity: 1;}
 #viz {
   justify-content: space-around;
