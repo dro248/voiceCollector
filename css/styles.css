@@ -32,14 +32,20 @@ canvas {
   justify-content: space-around;
   height: 20%;
   width: 100%;*/
+  padding: 25px;
 }
 #record, #save_img { 
-  height: 10vh;
+  height: 3.5em;
   border: 1px solid black;
   border-radius: 100%;
   padding: 10px;
   cursor: pointer;
+  transition: all .5s;
 }
+
+#record:hover { filter: invert(); background-color: #202020; }
+#save_img:hover { background-color: #dfdfdf; border: #dfdfdf; }
+
 /*#record.recording { 
   background: red;
   background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
@@ -60,6 +66,6 @@ canvas {
 #wavedisplay { position: fixed; top: 0; right: 0; }*/
 @media (orientation: landscape) {
   body { flex-direction: row;}
-  #controls { flex-direction: column; height: 100%; width: 10%;}
+  /*#controls { flex-direction: column; height: 100%; width: 10%;}*/
   /*#viz { height: 100%; width: 90%;}*/
 }
