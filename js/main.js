@@ -58,7 +58,7 @@ function toggleRecording( e ) {
         audioRecorder.stop();
         e.classList.remove("recording");
         audioRecorder.getBuffers( gotBuffers );
-        document.getElementById('record').src = "img/microphone.svg";
+        document.getElementById('record').src = "img/muted.svg";
     } 
     else {
         // start recording
