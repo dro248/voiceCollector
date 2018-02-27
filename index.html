@@ -20,14 +20,28 @@
   <div id="textContainer">
     <h1 id="titleText">Voice Collector</h1>
     <div id="promptContainer">
-      <p>Here is some text...</p>
+      <p id="prompt">Here is some text...</p>
     </div>
   </div>
   <div id="controls">
     <!-- <img id="record" src="img/mic128.png" onclick="toggleRecording(this);"> -->
     <img id="record" src="img/muted.svg" onclick="toggleRecording(this);">
     <a id="save" href="#"><img src="img/upload_blue.svg" id="save_img"></a>
-    <!-- <img id="rotate" src="img/rotate.svg"> -->
+    <img id="rotate" src="img/rotate.svg" onclick="loadSentence()">
   </div>
+  <script type="text/javascript">
+    function loadSentence(){
+      let request = new XMLHttpRequest()
+      request.open('GET', 'http://localhost:8080')
+      request.responseType = 'text'
+      request.onload = function(){
+        // console.log(request.response)
+        document.getElementById('prompt').innerHTML = request.response
+      }
+      request.send()
+    }
+
+    window.onload(loadSentence())
+  </script>
 </body>
 </html>
